@@ -16,3 +16,5 @@ https://abbygraves.github.io/run-buddy/
 ## Contribution
 Made with ❤️ by Abby Graves
 
+
+### ©2019 Run Buddy, Inc
