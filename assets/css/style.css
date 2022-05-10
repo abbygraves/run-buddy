@@ -121,11 +121,15 @@ header nav ul li a {
 
 /* —――――—―——――――—―——――――—―——――――― */
 
-/* general (sections) style start */
+/* all sections style start */
 section {
     padding: 60px;
 }
+/* all sections style end */
 
+/* —――――—―——――――—―——――――—―——――――― */
+
+/* section title style start */
 .section-title {
     font-size: 55px;
     color: #024e76;
@@ -143,8 +147,7 @@ section {
 .secondary-border {
     border-color: #39a6b2;
 }
-
-/* general (sections) style end */
+/* section title style end */
 
 /* —――――—―——――――—―——――――—―——――――― */
 
