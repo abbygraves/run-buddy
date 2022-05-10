@@ -11,13 +11,21 @@ body {
 
 /* —――――—―——――――—―——――――—―——――――― */
 
-/* header + navigation style start */
+/* HEADER + NAV STYLE START */
 header {
     padding: 20px 35px;
     background-color: #39a6b2;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 header h1 {
@@ -25,6 +33,7 @@ header h1 {
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
@@ -48,12 +57,20 @@ header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vm;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-/* header + navigation style end */
+
+header nav ul li a:hover {
+    background: #fce138;
+    color: #024e76;
+    border-radius: 15px;
+    text-shadow: none;
+}
+/* HEADER + NAV STYLE END */
 
 /* —――――—―——――――—―——――――—―——――――― */
 
-/* hero style start */
+/* HERO STYLE START */
 .hero {
     background-image: url("../images/hero-bg.jpg");
     background-size: cover;
@@ -62,6 +79,8 @@ header nav ul li a {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    background-attachment: fixed;
+    background-position: 80%;
 }
 
 .hero-cta {
@@ -77,15 +96,18 @@ header nav ul li a {
     font-style: italic;
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-form {
-    background-color: #fce138;
+    background-color: rgba(252, 225, 56, 0.8);
     padding: 20px;
     color: #024e76;
     border: solid 3px #024e76;
     width: 40%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 
 .hero-form h3 {
@@ -105,6 +127,13 @@ header nav ul li a {
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
 
 .hero-form label {
@@ -117,20 +146,25 @@ header nav ul li a {
     border: none;
     padding: 10px 20px;
     font-size: 16px;
+    border-radius: 10px;
 }
-/* hero style end */
+
+.hero-form button:hover {
+    background-color: #39a6b2;
+}
+/* HERO STYLE END */
 
 /* —――――—―——――――—―——――――—―——――――― */
 
-/* all sections style start */
+/* ALL SECTIONS STYLE START */
 section {
     padding: 60px;
 }
-/* all sections style end */
+/* ALL SECTIONS STYLE END */
 
 /* —――――—―——――――—―——――――—―——――――― */
 
-/* section title style start */
+/* SECTION TITLE STYLE START */
 .section-title {
     font-size: 48px;
     color: #024e76;
@@ -148,11 +182,11 @@ section {
 .secondary-border {
     border-color: #39a6b2;
 }
-/* section title style end */
+/* SECTION TITLE SYTLE END */
 
 /* —――――—―——――――—―——――――—―——――――― */
 
-/* "what we do" style start */
+/* "WHAT WE DO" STYLE START */
 
 .intro p {
     line-height: 1.7;
@@ -162,11 +196,11 @@ section {
     margin: 0 auto;
     text-align: center;
 }
-/* "what we do" style end */
+/* "WHAT WE DO" STYLE END */
 
 /* —――――—―——――――—―——――――—―——――――― */
 
-/* "what you do" style start */
+/* "WHAT YOU DO" STYLE START */
 .steps {
     background: #fce138;
 }
@@ -175,11 +209,14 @@ section {
     margin: 50px auto;
     padding-bottom: 50px;
     width: 80%;
-    border-bottom: 1px solid #39a6b2;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+.step:not(:last-child) {
+    border-bottom: 1px solid #39a6b2 
 }
 
 .step h3 {
@@ -218,12 +255,11 @@ section {
     color: #39a6b2;
     font-size: 18px;
 }
-
-/* "what you do" style end */
+/* "WHAT YOU DO" STYLE END */
 
 /* —――――—―——――――—―——――――—―——――――― */
 
-/* "meet the trainers" style start */
+/* "MEET THE TRAINERS" STYLE START */
 .trainers {
     width: 100%;
     margin: 0 auto;
@@ -261,11 +297,11 @@ section {
 .trainer-bio p {
     font-size: 17px;
 }
-/* "meet the trainers" style end */
+/* "MEET THE TRAINERS" STYLE END */
 
 /* —――――—―——――――—―——――――—―——――――― */
 
-/* "reach out" style start */
+/* "REACH OUT" STYLE START */
 .contact {
     background-color: #024e76;
 }
@@ -318,6 +354,13 @@ section {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
 
 .contact-form button {
@@ -328,13 +371,18 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size: 16px;
+    border-radius: 10px;
 }
 
-/* "reach out" style end */
+.contact-form button:hover {
+    color: #fce138;
+    background: #39a6b2;
+}
+/* "REACH OUT" STYLE END */
 
 /* —――――—―——――――—―——――――—―——――――― */
 
-/* footer style start */
+/* FOOTER STYLE START */
 footer {
     background: #fce138;
     width: 100%;
@@ -358,11 +406,11 @@ footer div {
 footer a {
     color: #024e76;
 }
-/* footer style end */
+/* FOOTER STYLE END */
 
 /* —――――—―——――――—―——――――—―——――――― */
 
-/* utility classes */
+/* UTILITIY CLASSES */
 .text-left {
     text-align: left;
 }
@@ -374,7 +422,7 @@ footer a {
 .flex-row {
     display: flex;
 }
-/* utility classes */
+/* UTILITIY CLASSES */
 
 /* —――――—―——――――—―——――――—―——――――― */
 
@@ -383,6 +431,7 @@ footer a {
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
     }
 
     header h1 {
